@@ -26,12 +26,6 @@ git checkout -b dev
 git push --set-upstream origin dev
 ```
 
-Add the remote branch from the original repository to keep track of changes
-```
-git remote add upstream https://github.com/dis09/statlib.git 
-git branch -va
-```
-
 Make changes to the code and test it with 
 ```
 python -m pytest
@@ -46,7 +40,13 @@ git push
 ```
 
 
-In case you need to update your master branch from the original upstream repository make
+In case you need to update your master branch from the original upstream repository add the remote branch from the original repository to keep track of changes
+```
+git remote add upstream https://github.com/dis09/statlib.git 
+git branch -va
+```
+
+Then update your master branch
 
 ```
 git fetch upstream
