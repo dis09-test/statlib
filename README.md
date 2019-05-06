@@ -1,7 +1,5 @@
 [![Build Status](https://travis-ci.com/dis09/statlib.svg?token=kXyCrK6nRFhWwsQDajhs&branch=master)](https://travis-ci.com/dis09/statlib)
 
-
-
 # statlib
 
 statistical functions in python - playground for the course *introduction to statistics with python*
@@ -10,9 +8,11 @@ statistical functions in python - playground for the course *introduction to sta
 ## Development
 
 
-Clone the repository
+On GitHub, fork the repository into your account by clicking on the `Fork` button.
+
+Clone the forked repository
 ```
-git clone https://github.com/dis09/statlib.git
+git clone https://github.com/<username>/statlib.git
 ```
 
 Navigate to the root folder
@@ -20,10 +20,16 @@ Navigate to the root folder
 cd statlib
 ```
 
-Create a feature branch and push it to GitHub
+Create a development branch and push it to your GitHub
 ```
-git checkout -b [name_of_your_new_branch]
-git push --set-upstream origin [name_of_your_new_branch]
+git checkout -b dev
+git push --set-upstream origin dev
+```
+
+Add the remote branch from the original repository to keep track of changes
+```
+git remote add upstream https://github.com/dis09/statlib.git 
+git branch -va
 ```
 
 Make changes to the code and test it with 
@@ -40,14 +46,19 @@ git push
 ```
 
 
-In case you need to update your feature branch from the master branch make
+In case you need to update your master branch from the original upstream repository make
 
 ```
+git fetch upstream
 git checkout master
-git pull
-git checkout [name_of_your_new_branch]
+git merge upstream/master
+```
+
+If you want to merge the master branch into your dev branch make
+
+```
+git checkout dev
 git merge master 
-git push
 ```
 
 
