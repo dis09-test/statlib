@@ -39,6 +39,10 @@ git commit -m "add feature x"
 git push
 ```
 
+On GitHub submit a `pull request` to merge your features from your `dev` branch into the original repository!
+
+---
+
 
 In case you need to update your master branch from the original upstream repository add the remote branch from the original repository to keep track of changes
 ```
